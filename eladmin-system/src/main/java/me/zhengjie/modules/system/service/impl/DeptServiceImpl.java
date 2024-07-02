@@ -254,7 +254,7 @@ public class DeptServiceImpl implements DeptService {
     }
 
     private List<DeptDto> deduplication(List<DeptDto> list) {
-        List<DeptDto> deptDtos = new ArrayList<>();
+        List<DeptDto> deptDtos = new HashSet<>();
         for (DeptDto deptDto : list) {
             boolean flag = true;
             for (DeptDto dto : list) {
